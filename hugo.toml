@@ -1,13 +1,38 @@
 baseURL = "https://www.glads.fr"
-
-# This is a "one page"-website, so we do not need these kinds of pages...
-disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
-
+title = "GLADS"
+theme = "air"
 defaultContentLanguage = "fr"
 
-# The name of this wonderful theme ;-).
-theme = "air"
+disableKinds = ["taxonomy", "term", "RSS", "robotsTXT"]
 
-# The browser tab name
-title = "GLADS"
+[languages]
+  [languages.fr]
+    languageCode = "fr-FR"
+    contentDir = "content/fr"
+    languageName = "Français"
+    weight = 1
 
+  [[languages.fr.menus.main]]
+    name = "Accueil"
+    pageRef = "/"
+    weight = 10
+
+  [[languages.fr.menus.footer]]
+    name = "GLADS"
+    pageRef = "/"
+    weight = 10
+
+[params]
+  mainColor = "#0f2b46"
+  footer = "GLADS - Guillaume Laurent Architecture Développement Sécurité - EURL au capital de 1 000 euros"
+  [params.author]
+    name = "Guillaume Laurent"
+    siteUrl = "https://www.glads.fr/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<style>
+section.odd a { color: #fff; text-decoration: underline; }
+section.odd strong { color: #fff; }
+section.odd li { color: #fff; }
+section.odd hr { border-color: rgba(255,255,255,0.3); }
+</style>
+
+<main>
+
+    {{ $landingPage := .Site.GetPage "landing-page" }}
+    {{ if and $landingPage $landingPage.Pages }}
+        {{ range $index, $page := $landingPage.Pages.ByWeight }}
+            {{ $odd := eq (mod $index 2) 1 }}
+            {{ $position := cond (eq (mod (div $index 2) 2) 1) "odd-left" "odd-right" }}
+
+            <section class="container-fluid pb-5 pt-5{{ if $odd }} odd {{ $position }}{{ end }}">
+
+                <div class="container">
+
+                    <h1>{{ .Title }}</h1>
+                    {{ .Content }}
+                </div>
+            </section>
+        {{ end }}
+    {{ else }}
+    <section class="container">
+        {{ .Content }}
+    </section>
+    {{ end }}
+</main>
+
+{{ end }}
