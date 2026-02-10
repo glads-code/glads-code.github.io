@@ -1,0 +1,13 @@
+baseURL = "https://www.glads.fr"
+
+# This is a "one page"-website, so we do not need these kinds of pages...
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+
+defaultContentLanguage = "fr"
+
+# The name of this wonderful theme ;-).
+theme = "air"
+
+# The browser tab name
+title = "GLADS"
+
