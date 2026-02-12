@@ -24,7 +24,7 @@ disableKinds = ["taxonomy", "term", "RSS", "section"]
     weight = 10
 
 [params]
-  mainColor = "#0f2b46"
+  mainColor = "#1b4f72"
   footer = "GLADS - Guillaume Laurent Architecture Développement Sécurité - EURL au capital de 1 000 euros"
   [params.author]
     name = "Guillaume Laurent"

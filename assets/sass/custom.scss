@@ -2,3 +2,23 @@ section.odd a { color: #fff; text-decoration: underline; }
 section.odd strong { color: #fff; }
 section.odd li { color: #fff; }
 section.odd hr { border-color: rgba(255,255,255,0.3); }
+
+/* Logo in navbar */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Logo in banner/header */
+.logo-banner {
+  max-height: 160px;
+  width: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .logo-banner {
+    max-height: 110px;
+  }
+}
