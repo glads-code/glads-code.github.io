@@ -26,7 +26,7 @@ Vous avez un projet informatique ? Vous souhaitez moderniser votre système d'in
 
 Société de conseil informatique — EURL au capital de 1 000 euros
 
-**Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
+<i class="bi bi-geo-alt-fill"></i> **Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
 
 <i class="bi bi-envelope-fill"></i> **Email :** [contact@glads.fr](mailto:contact@glads.fr)
 
