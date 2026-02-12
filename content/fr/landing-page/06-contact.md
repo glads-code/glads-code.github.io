@@ -11,7 +11,7 @@ Vous avez un projet informatique ? Vous souhaitez moderniser votre système d'in
 
 **GLADS** — Guillaume Laurent Architecture Développement Sécurité
 
-EURL au capital de 1 000 euros
+Société de conseil informatique — EURL au capital de 1 000 euros
 
 **Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
 
