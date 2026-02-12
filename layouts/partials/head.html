@@ -34,4 +34,8 @@
   {{ $style := resources.Get "sass/main.scss" | css.Sass | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
+  <!-- Custom overrides -->
+  {{ $custom := resources.Get "sass/custom.scss" | css.Sass | resources.Minify }}
+  <link rel="stylesheet" href="{{ $custom.Permalink }}">
+
 </head>
