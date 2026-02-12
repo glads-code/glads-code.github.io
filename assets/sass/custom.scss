@@ -22,3 +22,15 @@ section.odd hr { border-color: rgba(255,255,255,0.3); }
     max-height: 110px;
   }
 }
+
+/* Section illustrations */
+.section-illustration {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-illustration svg {
+  height: 80px;
+  width: auto;
+  color: currentColor;
+}
