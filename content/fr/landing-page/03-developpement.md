@@ -30,4 +30,4 @@ De la conception à la mise en production, GLADS réalise vos projets logiciels 
 
 - **Technologies maîtrisées** — C#/.NET, GoLang, Rust, C, Azure, Kubernetes, Docker
 
-Chaque projet est conduit selon les meilleures pratiques : revues de code, tests unitaires et d'intégration, déploiement continu. Nous avons piloté des projets allant jusqu'à 45 000 jours/homme avec des équipes réparties en France et à l'international.
+Chaque projet est conduit selon les meilleures pratiques : revues de code, tests unitaires et d'intégration, déploiement continu. Nous avons piloté des projets allant jusqu'à 45_000 jours/homme avec des équipes réparties en France et à l'international.

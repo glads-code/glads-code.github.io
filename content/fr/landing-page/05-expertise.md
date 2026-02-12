@@ -29,6 +29,55 @@ weight: 50
 - **50% d'accélération** des livraisons produit grâce à la mise en place de pratiques DevOps
 - **15 collaborateurs** formés aux pratiques CI/CD et infrastructure-as-code
 
-**Secteurs d'intervention :** logistique et distribution (Hopps Group / SPIR Communication), santé (APHM - Hôpitaux de Marseille), média et analytics (Seevibes), aéronautique (Eurocopter)
+**Secteurs d'intervention :**
 
-**Compétences techniques :** C#/.NET, GoLang, Rust, C · PostgreSQL, SQL Server, Oracle · Azure DevOps, Kubernetes, Docker, Datadog · Git, Jira, Scrum
+<div class="sector-badges">
+  <div class="sector-badge">
+    <i class="bi bi-truck"></i>
+    <div>
+      <strong>Hopps Group / SPIR</strong>
+      <span>Logistique & distribution</span>
+    </div>
+  </div>
+  <div class="sector-badge">
+    <i class="bi bi-hospital"></i>
+    <div>
+      <strong>APHM</strong>
+      <span>Santé</span>
+    </div>
+  </div>
+  <div class="sector-badge">
+    <i class="bi bi-bar-chart-line"></i>
+    <div>
+      <strong>Seevibes</strong>
+      <span>Média & analytics</span>
+    </div>
+  </div>
+  <div class="sector-badge">
+    <i class="bi bi-airplane"></i>
+    <div>
+      <strong>Eurocopter</strong>
+      <span>Aéronautique</span>
+    </div>
+  </div>
+</div>
+
+**Compétences techniques :**
+
+<div class="tech-grid">
+  <div class="tech-item"><i class="devicon-csharp-plain"></i><span>C#</span></div>
+  <div class="tech-item"><i class="devicon-go-original-wordmark"></i><span>Go</span></div>
+  <div class="tech-item"><i class="devicon-rust-original"></i><span>Rust</span></div>
+</div>
+<div class="tech-grid">
+  <div class="tech-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+  <div class="tech-item"><i class="devicon-microsoftsqlserver-plain"></i><span>SQL Server</span></div>
+  <div class="tech-item"><i class="devicon-oracle-original"></i><span>Oracle</span></div>
+</div>
+<div class="tech-grid">
+  <div class="tech-item"><i class="devicon-azure-plain"></i><span>Azure</span></div>
+  <div class="tech-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+  <div class="tech-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+  <div class="tech-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+  <div class="tech-item"><i class="devicon-jira-plain"></i><span>Jira</span></div>
+</div>
