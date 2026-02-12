@@ -1,8 +1,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ .Site.Title }} | {{ .Title }} | {{ .Params.catchline }} | {{ .Summary }}">
+  <meta name="robots" content="index, follow">
+  {{ $desc := .Description | default (printf "%s — %s" .Site.Title (.Params.catchline | default .Title)) }}
+  <meta name="description" content="{{ $desc }}">
   <title>{{ .Site.Title }} | {{ .Title }} </title>
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:locale" content="{{ .Site.Language.Lang }}">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ $desc }}">
 
   <!-- Favicon -->
   <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
@@ -37,5 +53,29 @@
   <!-- Custom overrides -->
   {{ $custom := resources.Get "sass/custom.scss" | css.Sass | resources.Minify }}
   <link rel="stylesheet" href="{{ $custom.Permalink }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GLADS — Guillaume Laurent Architecture Développement Sécurité",
+    "url": {{ .Site.BaseURL }},
+    "email": "contact@glads.fr",
+    "description": "Cabinet de conseil informatique spécialisé en architecture logicielle, développement sur mesure.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Saint-Maximin-la-Sainte-Baume",
+      "postalCode": "83470",
+      "addressCountry": "FR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Guillaume Laurent"
+    },
+    "areaServed": "FR",
+    "knowsAbout": ["Architecture logicielle", "Développement logiciel", "Cloud Azure", "DevOps"]
+  }
+  </script>
 
 </head>

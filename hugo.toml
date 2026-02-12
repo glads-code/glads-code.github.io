@@ -3,7 +3,8 @@ title = "GLADS"
 theme = "air"
 defaultContentLanguage = "fr"
 
-disableKinds = ["taxonomy", "term", "RSS", "robotsTXT"]
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS", "section"]
 
 [languages]
   [languages.fr]
