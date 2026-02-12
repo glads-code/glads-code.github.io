@@ -1,3 +1,28 @@
+/* Typography — Inter + Space Grotesk */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 { font-size: 2.25rem; font-weight: 600; }
+section h1 { font-size: 1.75rem; font-weight: 600; }
+
+p, li { font-size: 1.125rem; }
+
+@media (max-width: 768px) {
+  body { font-size: 1rem; }
+  h1 { font-size: 1.75rem; }
+  section h1 { font-size: 1.5rem; }
+  p, li { font-size: 1rem; }
+}
+
 section.odd a { color: #fff; text-decoration: underline; }
 section.odd strong { color: #fff; }
 section.odd li { color: #fff; }
