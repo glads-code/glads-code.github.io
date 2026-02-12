@@ -11,7 +11,6 @@ weight: 50
 - **Équipes de 6 ingénieurs** pilotées via la méthode Scrum en environnement cloud Azure
 - **50% d'accélération** des livraisons produit grâce à la mise en place de pratiques DevOps
 - **15 collaborateurs** formés aux pratiques CI/CD et infrastructure-as-code
-- **99,9% de disponibilité** système maintenue sur des projets e-commerce critiques
 
 **Secteurs d'intervention :** logistique et distribution (Hopps Group / SPIR Communication), santé (APHM - Hôpitaux de Marseille), média et analytics (Seevibes), aéronautique (Eurocopter)
 
