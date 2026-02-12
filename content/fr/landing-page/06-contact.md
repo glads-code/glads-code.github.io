@@ -15,6 +15,6 @@ EURL au capital de 1 000 euros
 
 **Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
 
-**Email :** contact@glads.fr
+<i class="bi bi-envelope-fill"></i> **Email :** [contact@glads.fr](mailto:contact@glads.fr)
 
-**LinkedIn :** [GLADS](https://www.linkedin.com/company/glads-linked/)
+<i class="bi bi-linkedin"></i> **LinkedIn :** [GLADS](https://www.linkedin.com/company/glads-linked/)
