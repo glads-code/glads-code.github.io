@@ -4,7 +4,7 @@
   <meta name="robots" content="index, follow">
   {{ $desc := .Description | default (printf "%s — %s" .Site.Title (.Params.catchline | default .Title)) }}
   <meta name="description" content="{{ $desc }}">
-  <title>{{ .Site.Title }} | {{ .Title }} </title>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- Open Graph -->
