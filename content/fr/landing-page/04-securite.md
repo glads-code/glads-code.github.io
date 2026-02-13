@@ -19,7 +19,7 @@ weight: 40
 
 La sécurité et la fiabilité de vos systèmes sont au coeur de nos préoccupations. GLADS vous propose des services complets pour protéger et optimiser votre infrastructure informatique.
 
-- **Cybersécurité** — Audit de sécurité, renforcement des protocoles d'accès, réduction des vulnérabilités critiques. Nous avons réduit de 70% les vulnérabilités critiques sur des projets à forte exposition
+- **Cybersécurité** — Audit de sécurité, renforcement des protocoles d'accès, réduction des vulnérabilités critiques. Nous avons réduit de 70% les vulnérabilités critiques
 
 - **Cloud & DevOps** — Déploiement et gestion d'infrastructures cloud Azure, monitoring en temps réel avec Datadog et Kubernetes, automatisation totale des déploiements
 
