@@ -56,7 +56,7 @@ weight: 50
   <div class="sector-badge">
     <i class="bi bi-airplane"></i>
     <div>
-      <strong>Eurocopter</strong>
+      <strong>Airbus Hélicopters</strong>
       <span>Aéronautique</span>
     </div>
   </div>

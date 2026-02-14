@@ -36,6 +36,6 @@ weight: 10
 </svg>
 </div>
 
-**GLADS** est une société de conseil informatique elle accompagne les entreprises de toutes tailles dans leurs projets de transformatition numérique, du conseil stratégique à la mise en production.
+**GLADS** société de conseil informatique, accompagne les entreprises de toutes tailles dans leurs projets de transformation numérique, du conseil stratégique à la mise en production.
 
 Notre conviction : concevoir des solutions informatiques **maintenables, évolutives, élégantes, à fortes valeurs ajoutées**.
