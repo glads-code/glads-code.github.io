@@ -3,7 +3,7 @@ title: Conseil & Stratégie
 weight: 20
 params:
   icon: bi-diagram-3
-  description: "Définissez une feuille de route technologique alignée sur vos objectifs business et techniques."
+  description: "Définir une feuille de route technologique alignée sur vos objectifs business et techniques."
 ---
 
 - **Audit et expertise technique** — Analyse approfondie de vos systèmes, identification des axes d'amélioration et plan d'action priorisé

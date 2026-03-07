@@ -48,6 +48,11 @@
       "@type": "ProfessionalService",
       "name": "GLADS — Guillaume Laurent Architecture Développement Sécurité",
       "url": "{{ .Site.BaseURL }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}img/logo.png"
+      },
+      "image": "{{ .Site.BaseURL }}img/og-glads.png",
       "email": "contact@glads.fr",
       "description": "{{ .Description }}",
       "address": {
@@ -132,6 +137,13 @@
             -webkit-text-fill-color: transparent;
             text-decoration: none;
             letter-spacing: 2px;
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+
+        .logo-img {
+            height: 36px; width: auto;
+            filter: brightness(0) invert(1);
+            flex-shrink: 0;
         }
 
         .nav-links { display: flex; gap: 2.5rem; }
@@ -559,7 +571,10 @@
     <div class="ambient-light light-2"></div>
 
     <nav>
-        <a href="#" class="logo">GLADS</a>
+        <a href="#" class="logo">
+            <img src="{{ "img/logo.png" | relURL }}" alt="Logo GLADS" class="logo-img">
+            GLADS
+        </a>
         <div class="nav-links">
             <a href="#expertises">Savoir-Faire</a>
             <a href="#tech">Technologies</a>
