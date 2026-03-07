@@ -393,11 +393,102 @@
             100% { transform: scale(0.9) translate(-20px, -30px); }
         }
 
+        /* Partner Section */
+        .partner-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--surface-glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3.5rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .partner-card:hover { border-color: rgba(59, 130, 246, 0.3); }
+
+        .partner-logo-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .partner-logo-block img.partner-logo {
+            width: 100%;
+            max-width: 180px;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+            transition: opacity 0.3s;
+        }
+
+        .partner-logo-block:hover img.partner-logo { opacity: 1; }
+
+        .partner-banner {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-banner:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25);
+        }
+
+        .partner-banner img { display: block; width: 100%; }
+
+        .partner-content h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+
+        .partner-content > p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+
+        .partner-content ul { list-style: none; padding: 0; margin: 0 0 2.5rem; color: var(--text-muted); }
+
+        .partner-content ul li {
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .partner-content ul li::before {
+            content: '›';
+            color: var(--accent-primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            line-height: 1.2;
+        }
+
+        .partner-content ul li strong { color: var(--text-main); }
+
+        .partner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: var(--text-muted);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .partner-badge i { color: var(--accent-primary); }
+
         @media (max-width: 900px) {
             .nav-links { display: none; }
             .hero { padding-top: 6rem; }
             .value-sec { padding: 2rem; }
             .tech-track { gap: 2.5rem; }
+            .partner-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
         }
     </style>
 </head>
@@ -409,6 +500,7 @@
     {{ $cards := first 3 (after 1 $pages) }}
     {{ $tech := index $pages 4 }}
     {{ $refs := index $pages 5 }}
+    {{ $partner := index $pages 6 }}
 
     <div class="ambient-light light-1"></div>
     <div class="ambient-light light-2"></div>
@@ -419,6 +511,7 @@
             <a href="#expertises">Savoir-Faire</a>
             <a href="#tech">Technologies</a>
             <a href="#clients">Références</a>
+            <a href="#partenaires">Partenaires</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -471,6 +564,35 @@
     <section id="clients" class="container" style="padding-top: 0;">
         <h2 class="section-title">{{ .Title | replaceRE "confiance" "<span>confiance</span>" | safeHTML }}</h2>
         {{ .Content }}
+    </section>
+    {{ end }}
+
+    <!-- Partenaires -->
+    {{ with $partner }}
+    {{ $pUrl := .Params.partner_url }}
+    <section id="partenaires" class="container" style="padding-top: 0;">
+        <h2 class="section-title">Notre <span>Infrastructure</span></h2>
+        <div class="partner-card">
+            <div class="partner-logo-block">
+                <a href="{{ $pUrl }}" target="_blank" rel="noopener sponsored">
+                    <img src="{{ .Params.partner_logo | relURL }}" alt="{{ .Params.partner_name }}" class="partner-logo">
+                </a>
+                <a href="{{ $pUrl }}" target="_blank" rel="noopener sponsored" class="partner-banner" aria-label="Infomaniak Public Cloud — hébergement souverain">
+                    <img src="{{ .Params.partner_banner }}" alt="Infomaniak Public Cloud — hébergement souverain, éco-responsable, RGPD" loading="lazy" width="300" height="250">
+                </a>
+            </div>
+            <div class="partner-content">
+                <div class="partner-badge">
+                    <i class="bi bi-patch-check-fill"></i> Partenaire de confiance
+                </div>
+                <h3>{{ .Title }}</h3>
+                {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+                {{ .Content }}
+                <a href="{{ $pUrl }}" target="_blank" rel="noopener sponsored" class="btn-primary">
+                    {{ .Params.partner_cta }} <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
     </section>
     {{ end }}
 
