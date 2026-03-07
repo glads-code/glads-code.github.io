@@ -1,3 +1,4 @@
 public/*
 **/_gen/
 .vs
+.hugo_build.lock

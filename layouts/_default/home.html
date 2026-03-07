@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLADS | Architecture · Développement · Sécurité</title>
-    <meta name="description" content="GLADS — Cabinet de conseil informatique spécialisé en architecture logicielle, développement sur mesure et cybersécurité à Saint-Maximin-la-Sainte-Baume.">
+    <meta name="description" content="{{ .Description }}">
 
     <!-- Favicon -->
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
@@ -28,7 +28,7 @@
       "name": "GLADS — Guillaume Laurent Architecture Développement Sécurité",
       "url": "{{ .Site.BaseURL }}",
       "email": "contact@glads.fr",
-      "description": "Cabinet de conseil informatique spécialisé en architecture logicielle, développement sur mesure.",
+      "description": "{{ .Description }}",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Saint-Maximin-la-Sainte-Baume",
@@ -242,16 +242,35 @@
 
         .service-card h3 { font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700; }
 
-        .service-card p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; }
+        .service-card > p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; }
 
-        .service-card ul { list-style: none; color: var(--text-muted); font-size: 1rem; }
-
-        .service-card ul li {
-            margin-bottom: 1rem; display: flex;
-            align-items: flex-start; gap: 0.8rem;
+        /* Markdown list items in service cards */
+        .service-card ul {
+            list-style: none;
+            padding: 0; margin: 0;
+            color: var(--text-muted);
+            font-size: 1rem;
         }
 
-        .service-card ul li i { color: var(--accent-secondary); font-size: 1.1rem; }
+        .service-card ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .service-card ul li::before {
+            content: '›';
+            color: var(--accent-secondary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            line-height: 1.2;
+        }
+
+        .service-card ul li strong {
+            color: var(--text-main);
+        }
 
         /* Tech */
         .tech-showcase {
@@ -274,7 +293,7 @@
 
         .tech-item:hover { opacity: 1; transform: translateY(-8px); filter: grayscale(0%); }
 
-        .tech-item i { font-size: 4rem; margin-bottom: 0.8rem; color: var(--text-main); }
+        .tech-item i { font-size: 4rem; margin-bottom: 0.8rem; }
 
         .tech-item span { font-size: 1rem; font-weight: 600; color: var(--text-main); }
 
@@ -299,7 +318,7 @@
             transform: scale(1.02);
         }
 
-        .sector-badge i { font-size: 2rem; color: var(--accent-primary); }
+        .sector-badge i { font-size: 2rem; color: var(--accent-primary); flex-shrink: 0; }
 
         .sector-badge h4 { font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 700; }
 
@@ -314,6 +333,8 @@
         }
 
         .value-sec h3 { font-size: 2rem; margin-bottom: 1.5rem; }
+
+        .value-sec p { color: var(--text-muted); font-size: 1.1rem; }
 
         /* Footer */
         footer {
@@ -336,7 +357,7 @@
             margin-bottom: 1rem; font-weight: 900;
         }
 
-        .footer-info p { color: var(--text-muted); max-width: 450px; margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .footer-info p { color: var(--text-muted); max-width: 450px; margin-bottom: 0.5rem; font-size: 1.05rem; }
 
         .contact-links { display: flex; flex-direction: column; gap: 1.2rem; }
 
@@ -382,6 +403,13 @@
 </head>
 <body>
 
+    {{ $lp := .Site.GetPage "landing-page" }}
+    {{ $pages := $lp.Pages.ByWeight }}
+    {{ $presentation := index $pages 0 }}
+    {{ $cards := first 3 (after 1 $pages) }}
+    {{ $tech := index $pages 4 }}
+    {{ $refs := index $pages 5 }}
+
     <div class="ambient-light light-1"></div>
     <div class="ambient-light light-2"></div>
 
@@ -395,121 +423,65 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-badge">Cabinet de Conseil en Ingénierie IT</div>
-        <h1>Concevons ensemble <span>l'informatique de demain</span></h1>
-        <p>Notre conviction : concevoir des solutions informatiques maintenables, évolutives, élégantes, à fortes valeurs ajoutées. De l'architecture logicielle à la cybersécurité.</p>
+        <div class="hero-badge">{{ .Params.hero_badge }}</div>
+        <h1>{{ .Params.hero_h1 | safeHTML }}</h1>
+        <p>{{ .Description }}</p>
         <a href="#contact" class="btn-primary">
-            Démarrer un projet <i class="bi bi-arrow-right"></i>
+            {{ .Params.cta_text }} <i class="bi bi-arrow-right"></i>
         </a>
     </section>
 
+    <!-- Services -->
     <section id="expertises" class="container">
+        {{ with $presentation }}
         <div class="value-sec">
-            <h3>Plus de 15 ans d'expertise à votre service</h3>
-            <p style="color: var(--text-muted); font-size: 1.1rem;">GLADS accompagne les entreprises de toutes tailles dans leurs projets de transformation numérique, du conseil stratégique à la mise en production hautement sécurisée.</p>
+            <h3>{{ .Title }}</h3>
+            {{ .Content }}
         </div>
+        {{ end }}
 
         <h2 class="section-title">Notre <span>Savoir-Faire</span></h2>
 
         <div class="services-grid">
+            {{ range $cards }}
             <div class="service-card" onmousemove="handleMouseMove(event)">
-                <i class="bi bi-diagram-3 service-icon"></i>
-                <h3>Conseil &amp; Stratégie</h3>
-                <p>Définissez une feuille de route technologique alignée sur vos objectifs business et techniques.</p>
-                <ul>
-                    <li><i class="bi bi-chevron-double-right"></i> Audit et expertise technique poussée</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Transformation numérique globale</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Architectures modulaires (CQRS, Microservices)</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Accompagnement DevOps &amp; automatisation</li>
-                </ul>
+                <i class="bi {{ .Params.icon }} service-icon"></i>
+                <h3>{{ .Title }}</h3>
+                {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+                {{ .Content }}
             </div>
-
-            <div class="service-card" onmousemove="handleMouseMove(event)">
-                <i class="bi bi-braces-asterisk service-icon"></i>
-                <h3>Développement &amp; Édition</h3>
-                <p>Réalisation de projets logiciels avec une forte exigence de qualité, maintenabilité et performance.</p>
-                <ul>
-                    <li><i class="bi bi-chevron-double-right"></i> Applications métier sur mesure &amp; SaaS</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Intégration API RESTful, gRPC, Événementiel</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Optimisation des BD (PG, SQL Server, Oracle)</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Maîtrise C#/.NET, GoLang, Rust, C</li>
-                </ul>
-            </div>
-
-            <div class="service-card" onmousemove="handleMouseMove(event)">
-                <i class="bi bi-shield-lock service-icon"></i>
-                <h3>Sécurité &amp; Infrastructures</h3>
-                <p>La sécurité et la fiabilité de vos systèmes vitaux placées au cœur de nos intégrations cloud.</p>
-                <ul>
-                    <li><i class="bi bi-chevron-double-right"></i> Cybersécurité et audits avancés</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Déploiement Cloud Azure &amp; Kubernetes</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Haute disponibilité SLA 99,9%</li>
-                    <li><i class="bi bi-chevron-double-right"></i> Monitoring temps réel Datadog</li>
-                </ul>
-            </div>
+            {{ end }}
         </div>
     </section>
 
+    <!-- Tech Showcase -->
+    {{ with $tech }}
     <section id="tech" class="tech-showcase">
         <div class="container" style="padding: 2rem 5% 4rem;">
             <h2 class="section-title">Maîtrise <span>Technologique</span></h2>
-            <div class="tech-track">
-                <div class="tech-item" title="C#"><i class="devicon-csharp-plain colored"></i><span>C# .NET</span></div>
-                <div class="tech-item" title="Go"><i class="devicon-go-original-wordmark colored"></i><span>GoLang</span></div>
-                <div class="tech-item" title="Rust"><i class="devicon-rust-plain colored"></i><span>Rust</span></div>
-                <div class="tech-item" title="PostgreSQL"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
-                <div class="tech-item" title="SQL Server"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-                <div class="tech-item" title="Oracle"><i class="devicon-oracle-original colored"></i><span>Oracle</span></div>
-                <div class="tech-item" title="Azure Cloud"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-                <div class="tech-item" title="Kubernetes"><i class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></div>
-                <div class="tech-item" title="Docker"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
-                <div class="tech-item" title="Git"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            </div>
+            {{ .Content }}
         </div>
     </section>
+    {{ end }}
 
+    <!-- Références -->
+    {{ with $refs }}
     <section id="clients" class="container" style="padding-top: 0;">
-        <h2 class="section-title">Ils nous font <span>confiance</span></h2>
-        <div class="sectors-grid">
-            <div class="sector-badge">
-                <i class="bi bi-truck"></i>
-                <div>
-                    <h4>Hopps Group / SPIR</h4>
-                    <span>Logistique &amp; distribution</span>
-                </div>
-            </div>
-            <div class="sector-badge">
-                <i class="bi bi-hospital"></i>
-                <div>
-                    <h4>APHM</h4>
-                    <span>Santé</span>
-                </div>
-            </div>
-            <div class="sector-badge">
-                <i class="bi bi-graph-up-arrow"></i>
-                <div>
-                    <h4>Seevibes</h4>
-                    <span>Média &amp; Analytics</span>
-                </div>
-            </div>
-            <div class="sector-badge">
-                <i class="bi bi-airplane-engines"></i>
-                <div>
-                    <h4>Airbus Helicopters</h4>
-                    <span>Aéronautique</span>
-                </div>
-            </div>
-        </div>
+        <h2 class="section-title">{{ .Title | replaceRE "confiance" "<span>confiance</span>" | safeHTML }}</h2>
+        {{ .Content }}
     </section>
+    {{ end }}
 
+    <!-- Footer / Contact -->
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-info">
                 <h2>GLADS</h2>
                 <p><strong>Guillaume Laurent Architecture Développement Sécurité.</strong><br>
                 Votre partenaire technologique d'excellence. Expertise acquise au sein de grands groupes pour la conception d'architectures pérennes.</p>
-                <div style="color: var(--text-muted); font-size: 0.95rem; margin-top: 2rem;">
+                <div style="margin-top: 2rem;">
                     <p>EURL au capital de 1 000 euros</p>
                     <p>Saint-Maximin-la-Sainte-Baume, FRANCE</p>
                 </div>
