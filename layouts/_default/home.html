@@ -128,6 +128,7 @@
             font-size: 1.8rem; font-weight: 900;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
             letter-spacing: 2px;
@@ -182,6 +183,7 @@
         .hero h1 span {
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -231,6 +233,7 @@
         .section-title span {
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -271,6 +274,7 @@
             font-size: 3rem;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1.5rem; display: inline-block;
             transition: transform 0.4s ease;
@@ -292,9 +296,9 @@
 
         .service-card ul li {
             margin-bottom: 1rem;
-            display: flex;
-            align-items: baseline;
-            gap: 0.8rem;
+            display: block;
+            position: relative;
+            padding-left: 1.4rem;
         }
 
         .service-card ul li::before {
@@ -302,12 +306,16 @@
             color: var(--accent-secondary);
             font-size: 1.4rem;
             font-weight: 700;
-            flex-shrink: 0;
+            position: absolute;
+            left: 0;
+            top: -0.05em;
             line-height: 1.2;
         }
 
         .service-card ul li strong {
             color: var(--text-main);
+            display: block;
+            margin-bottom: 0.2rem;
         }
 
         /* Tech */
@@ -391,6 +399,7 @@
             font-size: 2.5rem;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem; font-weight: 900;
         }
@@ -489,9 +498,9 @@
 
         .partner-content ul li {
             margin-bottom: 0.9rem;
-            display: flex;
-            align-items: baseline;
-            gap: 0.8rem;
+            display: block;
+            position: relative;
+            padding-left: 1.4rem;
         }
 
         .partner-content ul li::before {
@@ -499,11 +508,17 @@
             color: var(--accent-primary);
             font-size: 1.4rem;
             font-weight: 700;
-            flex-shrink: 0;
+            position: absolute;
+            left: 0;
+            top: -0.05em;
             line-height: 1.2;
         }
 
-        .partner-content ul li strong { color: var(--text-main); }
+        .partner-content ul li strong {
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
 
         .partner-badge {
             display: inline-flex;
@@ -559,7 +574,7 @@
         <div class="hero-badge">{{ .Params.hero_badge }}</div>
         <h1>{{ .Params.hero_h1 | safeHTML }}</h1>
         <p>{{ .Description }}</p>
-        <a href="#contact" class="btn-primary">
+        <a href="mailto:contact@glads.fr?subject=D%C3%A9marrer%20un%20projet&body=Bonjour%20Guillaume%2C%0A%0AJe%20souhaite%20vous%20contacter%20concernant%20un%20projet.%0A%0AContexte%20%3A%20%0A" class="btn-primary">
             {{ .Params.cta_text }} <i class="bi bi-arrow-right"></i>
         </a>
     </section>
