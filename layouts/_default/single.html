@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} — GLADS</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"></noscript>
+
+    <style>
+        :root {
+            --bg-dark: #07090e;
+            --surface-dark: #111827;
+            --surface-glass: rgba(17, 24, 39, 0.6);
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            min-height: 100vh;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08), transparent 30%);
+        }
+
+        nav {
+            padding: 1.2rem 5%;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(7, 9, 14, 0.7);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem; font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--accent-primary); }
+
+        main {
+            max-width: 860px;
+            margin: 5rem auto;
+            padding: 0 5%;
+        }
+
+        .content-card {
+            background: var(--surface-glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 4rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .content-card h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content-card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-main);
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .content-card p { color: var(--text-muted); margin-bottom: 1rem; font-size: 1.05rem; }
+
+        .content-card strong { color: var(--text-main); }
+
+        .content-card a { color: var(--accent-primary); text-decoration: none; }
+
+        .content-card a:hover { text-decoration: underline; }
+
+        .content-card ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+
+        .content-card ul li {
+            color: var(--text-muted);
+            padding: 0.3rem 0 0.3rem 1.4rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .content-card ul li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent-secondary);
+            font-weight: 700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 4rem;
+        }
+
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--accent-primary); }
+
+        @media (max-width: 600px) {
+            .content-card { padding: 2rem; }
+            .content-card h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="{{ .Site.BaseURL }}" class="logo">GLADS</a>
+        <a href="{{ .Site.BaseURL }}" class="back-link">
+            <i class="bi bi-arrow-left"></i> Retour à l'accueil
+        </a>
+    </nav>
+
+    <main>
+        <div class="content-card">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; {{ now.Year }} GLADS — Guillaume Laurent Architecture Développement Sécurité</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="{{ .Site.BaseURL }}">Accueil</a> ·
+            <a href="mailto:contact@glads.fr">contact@glads.fr</a>
+        </p>
+    </footer>
+
+</body>
+</html>
