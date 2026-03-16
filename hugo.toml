@@ -4,7 +4,11 @@ theme = "air"
 defaultContentLanguage = "fr"
 
 enableRobotsTXT = true
+enableGitInfo = true
 disableKinds = ["taxonomy", "term", "section"]
+
+[frontmatter]
+  lastmod = [":git", "lastmod", ":fileModTime"]
 
 [languages]
   [languages.fr]
