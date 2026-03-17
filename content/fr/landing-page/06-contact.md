@@ -28,6 +28,6 @@ Société de conseil informatique — EURL au capital de 1 000 euros
 
 <i class="bi bi-geo-alt-fill"></i> **Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
 
-<i class="bi bi-envelope-fill"></i> **Email :** [contact@glads.fr](mailto:contact@glads.fr)
+<i class="bi bi-envelope-fill"></i> **Email :** [contact@glads.fr](mailto:contact@glads.fr) · [Signature PGP](/public.asc)
 
 <i class="bi bi-linkedin"></i> **LinkedIn :** [GLADS](https://www.linkedin.com/company/glads-linked/)
