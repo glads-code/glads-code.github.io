@@ -32,11 +32,11 @@ weight: 55
       <span>Aéronautique</span>
     </div>
   </div>
-  <div class="sector-badge">
+  <a class="sector-badge" href="https://www.coeurartichaut.fr" target="_blank" rel="noopener">
     <i class="bi bi-heart-pulse"></i>
     <div>
       <h4>Cœur Artichaut</h4>
       <span>Art-thérapie & bien-être</span>
     </div>
-  </div>
+  </a>
 </div>
