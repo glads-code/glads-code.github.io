@@ -134,6 +134,23 @@ section.odd .sector-badge span {
   color: #fff;
 }
 
+a.sector-badge {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+section.odd a.sector-badge:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 /* Section illustrations */
 .section-illustration {
   text-align: center;
