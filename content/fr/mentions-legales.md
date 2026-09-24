@@ -9,6 +9,9 @@ description: "Mentions légales de GLADS — Guillaume Laurent Architecture Dév
 
 - Forme juridique : EURL (Entreprise Unipersonnelle à Responsabilité Limitée)
 - Capital social : 1 000 euros
+- SIREN : 100 661 784
+- RCS : Draguignan 100 661 784
+- TVA intracommunautaire : FR17100661784
 - Siège social : Saint-Maximin-la-Sainte-Baume, 83470, Var, France
 - Email : [contact@glads.fr](mailto:contact@glads.fr)
 
