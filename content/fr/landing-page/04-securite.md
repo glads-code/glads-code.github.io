@@ -2,6 +2,7 @@
 title: Sécurité & Infrastructures
 weight: 40
 params:
+  page: /offres/cybersecurite-infrastructures/
   icon: bi-shield-lock
   description: "La sécurité et la fiabilité de vos systèmes vitaux placées au cœur de nos intégrations cloud."
 ---

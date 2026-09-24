@@ -297,6 +297,9 @@
 
         .service-card h3 { font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700; }
 
+        .card-more { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.5rem; color: var(--accent-primary); text-decoration: none; font-weight: 600; }
+        .card-more:hover { gap: 0.7rem; }
+
         .service-card > p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; }
 
         /* Markdown list items in service cards */
@@ -613,6 +616,7 @@
                 <h3>{{ .Title }}</h3>
                 {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
                 {{ .Content }}
+                {{ with .Params.page }}<a href="{{ . | relURL }}" class="card-more">En savoir plus <i class="bi bi-arrow-right"></i></a>{{ end }}
             </div>
             {{ end }}
         </div>

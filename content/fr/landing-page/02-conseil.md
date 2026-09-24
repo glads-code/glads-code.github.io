@@ -2,6 +2,7 @@
 title: Conseil & Stratégie
 weight: 20
 params:
+  page: /offres/conseil-architecture-logicielle/
   icon: bi-diagram-3
   description: "Définir une feuille de route technologique alignée sur vos objectifs business et techniques."
 ---

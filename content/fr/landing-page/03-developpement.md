@@ -2,6 +2,7 @@
 title: Développement & Édition
 weight: 30
 params:
+  page: /offres/developpement-logiciel-sur-mesure/
   icon: bi-braces-asterisk
   description: "Réalisation de projets logiciels avec une forte exigence de qualité, maintenabilité et performance."
 ---
