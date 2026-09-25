@@ -5,7 +5,7 @@ params:
   partner_name: "Infomaniak"
   partner_url: "https://www.infomaniak.com/fr/hebergement/public-cloud?utm_term=69a41970c63fc"
   partner_logo: "/img/infomaniak.svg"
-  partner_banner: "https://affiliation.storage5.infomaniak.com/banners/medium_rectanglepublic-cloud_fr.png"
+  partner_banner: "img/infomaniak-public-cloud.png"
   partner_cta: "Découvrir Infomaniak Public Cloud"
 description: "GLADS fait confiance à Infomaniak pour son infrastructure cloud souverain, éco-responsable et haute performance. Hébergement cloud en Suisse, 100% énergies renouvelables, conforme RGPD."
 ---
