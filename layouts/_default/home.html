@@ -88,6 +88,7 @@
         }
 
         html { scroll-behavior: smooth; }
+        html, body { overflow-x: clip; }
 
         * {
             margin: 0; padding: 0;
@@ -109,7 +110,7 @@
         /* Nav */
         nav {
             position: fixed;
-            width: 100%; top: 0; z-index: 1000;
+            left: 0; right: 0; top: 0; z-index: 1000;
             padding: 1.2rem 5%;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
@@ -426,6 +427,8 @@
         }
 
         /* Ambient lights */
+        /* Lueurs décoratives : contenues dans l'écran pour ne pas élargir la page sur mobile */
+        .ambient { position: absolute; inset: 0; overflow: hidden; z-index: -1; pointer-events: none; }
         .ambient-light {
             position: absolute; border-radius: 50%;
             filter: blur(100px); z-index: -1; opacity: 0.4;
@@ -539,8 +542,44 @@
 
         .partner-badge .icon { color: var(--accent-primary); }
 
+        /* Menu mobile (sans JavaScript) : affiché sous 900 px à la place de .nav-links */
+        .nav-menu { display: none; position: relative; }
+        .nav-menu summary {
+            list-style: none; cursor: pointer;
+            padding: 0.5rem 1rem; border-radius: 999px;
+            border: 1px solid var(--glass-border);
+            color: var(--text-main); font-weight: 500;
+        }
+        .nav-menu summary::-webkit-details-marker { display: none; }
+        .nav-menu[open] summary { border-color: var(--accent-primary); }
+        .nav-menu-links {
+            position: absolute; right: 0; top: calc(100% + 0.8rem);
+            display: flex; flex-direction: column; gap: 0.2rem;
+            min-width: 12rem; padding: 0.6rem;
+            background: var(--surface-dark); border: 1px solid var(--glass-border); border-radius: 12px;
+        }
+        .nav-menu-links a { color: var(--text-main); text-decoration: none; padding: 0.6rem 0.8rem; border-radius: 8px; }
+        .nav-menu-links a:hover, .nav-menu-links a:focus-visible { background: rgba(59, 130, 246, 0.12); color: var(--accent-primary); }
+
+        /* Accessibilité */
+        .skip-link {
+            position: absolute; left: 1rem; top: -4rem; z-index: 2000;
+            padding: 0.6rem 1rem; border-radius: 8px;
+            background: var(--accent-primary); color: #fff; text-decoration: none; font-weight: 600;
+        }
+        .skip-link:focus { top: 1rem; }
+        a:focus-visible, button:focus-visible, summary:focus-visible {
+            outline: 2px solid var(--accent-primary); outline-offset: 3px; border-radius: 4px;
+        }
+        .legal-link { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        .legal-link:hover, .legal-link:focus-visible { color: var(--accent-primary); }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        }
+
         @media (max-width: 900px) {
             .nav-links { display: none; }
+            .nav-menu { display: block; }
             .hero { padding-top: 6rem; }
             .value-sec { padding: 2rem; }
             .tech-track { gap: 2.5rem; }
@@ -578,8 +617,12 @@
     {{ $refs := index $pages 5 }}
     {{ $partner := index $pages 6 }}
 
-    <div class="ambient-light light-1"></div>
-    <div class="ambient-light light-2"></div>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <div class="ambient" aria-hidden="true">
+        <div class="ambient-light light-1"></div>
+        <div class="ambient-light light-2"></div>
+    </div>
 
     <nav>
         <a href="#" class="logo">
@@ -593,7 +636,19 @@
             <a href="#partenaires">Partenaires</a>
             <a href="#contact">Contact</a>
         </div>
+        <details class="nav-menu">
+            <summary>Menu</summary>
+            <div class="nav-menu-links">
+                <a href="#expertises">Savoir-Faire</a>
+                <a href="#tech">Technologies</a>
+                <a href="#clients">Références</a>
+                <a href="#partenaires">Partenaires</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </details>
     </nav>
+
+    <main id="contenu">
 
     <!-- Hero -->
     <section class="hero">
@@ -677,6 +732,8 @@
     </section>
     {{ end }}
 
+    </main>
+
     <!-- Footer / Contact -->
     <footer id="contact">
         <div class="footer-content">
@@ -705,7 +762,7 @@
                     {{ partial "icon.html" "bi/geo-alt-fill" }}
                     <span>83470 Saint-Maximin-la-Sainte-Baume</span>
                 </div>
-                <a href="https://www.linkedin.com/company/glads-linked/" target="_blank" class="contact-link">
+                <a href="https://www.linkedin.com/company/glads-linked/" target="_blank" rel="noopener" class="contact-link">
                     {{ partial "icon.html" "bi/linkedin" }}
                     <span>Page LinkedIn Officielle</span>
                 </a>
@@ -714,8 +771,7 @@
 
         <div class="bottom-bar">
             &copy; {{ now.Year }} GLADS. Tous droits réservés. ·
-            <a href="{{ "mentions-legales/" | relURL }}" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;"
-               onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--text-muted)'">
+            <a href="{{ "mentions-legales/" | relURL }}" class="legal-link">
                 Mentions légales
             </a>
         </div>

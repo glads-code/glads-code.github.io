@@ -146,4 +146,14 @@
             .content-card h1 { font-size: 1.8rem; }
         }
         .icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
+        .skip-link {
+            position: absolute; left: 1rem; top: -4rem; z-index: 2000;
+            padding: 0.6rem 1rem; border-radius: 8px;
+            background: var(--accent-primary); color: #fff; text-decoration: none; font-weight: 600;
+        }
+        .skip-link:focus { top: 1rem; }
+        a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; border-radius: 4px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        }
     </style>

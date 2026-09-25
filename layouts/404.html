@@ -10,6 +10,7 @@
     {{ partial "page-style.html" . }}
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
     <nav>
         <a href="{{ "/" | relURL }}" class="logo">
@@ -21,7 +22,7 @@
         </a>
     </nav>
 
-    <main>
+    <main id="contenu">
         <div class="content-card">
             <h1>Cette page n'existe pas</h1>
             <p>Le lien que vous avez suivi est peut-être incomplet, ou la page a été déplacée. Voici où trouver ce que vous cherchez :</p>

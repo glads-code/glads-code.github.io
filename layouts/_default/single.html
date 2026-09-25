@@ -20,6 +20,7 @@
     {{ partial "page-style.html" . }}
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
     <nav>
         <a href="{{ .Site.BaseURL }}" class="logo">
@@ -31,7 +32,7 @@
         </a>
     </nav>
 
-    <main>
+    <main id="contenu">
         <div class="content-card">
             <h1>{{ .Title }}</h1>
             {{ .Content }}
