@@ -24,6 +24,16 @@ description: "Mentions légales de GLADS — Guillaume Laurent Architecture Dév
 
 Ce site est hébergé par **GitHub Pages**, service de **GitHub, Inc.** (filiale de Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — téléphone : +1 877 448 4820 — [github.com](https://github.com).
 
+### Partenaire infrastructure : Infomaniak
+
+**Infomaniak Network SA**, Rue Eugène-Marziano 25, 1227 Les Acacias (Genève), Suisse — téléphone : +41 22 820 35 44 — [www.infomaniak.com](https://www.infomaniak.com).
+
+Partenaire infrastructure de GLADS, Infomaniak fournit :
+
+- le **nom de domaine** glads.fr et ses serveurs DNS ;
+- la **messagerie** contact@glads.fr ;
+- le **cloud souverain** (Infomaniak Public Cloud, hébergé en Suisse) sur lequel GLADS déploie ses projets et ceux de ses clients.
+
 ## Propriété intellectuelle
 
 L'ensemble des contenus présents sur ce site (textes, images, logos, structure) est la propriété exclusive de GLADS, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.
@@ -38,9 +48,13 @@ Le site étant hébergé sur GitHub Pages, GitHub, Inc. enregistre l'adresse IP 
 
 ### Vos données transmises par email
 
-Les seules données susceptibles d'être traitées sont celles que vous transmettez volontairement par email à [contact@glads.fr](mailto:contact@glads.fr). Elles sont utilisées uniquement pour répondre à votre demande et ne sont pas transmises à des tiers.
+Les seules données susceptibles d'être traitées sont celles que vous transmettez volontairement par email à [contact@glads.fr](mailto:contact@glads.fr). Elles sont utilisées uniquement pour répondre à votre demande et ne sont ni vendues ni cédées à des tiers. La messagerie est hébergée par Infomaniak Network SA en Suisse, pays reconnu par la Commission européenne comme offrant un niveau de protection adéquat.
 
 Conformément au Règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour exercer ces droits : [contact@glads.fr](mailto:contact@glads.fr). Vous pouvez aussi adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr)).
+
+## Liens d'affiliation
+
+La section « Notre Infrastructure » de la page d'accueil contient des liens d'affiliation vers Infomaniak : GLADS peut percevoir une commission si vous souscrivez à une offre après avoir suivi ces liens, sans surcoût pour vous. La bannière est servie par ce site ; aucun traceur n'est déposé avant que vous ne cliquiez.
 
 ## Liens hypertextes
 

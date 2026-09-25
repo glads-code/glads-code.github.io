@@ -471,6 +471,8 @@
 
         .partner-card:hover { border-color: rgba(59, 130, 246, 0.3); }
 
+        .partner-disclosure { margin-top: 0.8rem; font-size: 0.8rem; color: var(--text-muted); }
+        .partner-disclosure a { color: inherit; }
         .partner-logo-block {
             display: flex;
             flex-direction: column;
@@ -661,6 +663,7 @@
                 <a href="{{ $pUrl }}" target="_blank" rel="noopener sponsored" class="btn-primary">
                     {{ .Params.partner_cta }} <i class="bi bi-box-arrow-up-right"></i>
                 </a>
+                <p class="partner-disclosure">Lien d'affiliation : GLADS peut percevoir une commission, sans surcoût pour vous. <a href="{{ "mentions-legales/" | relURL }}">En savoir plus</a></p>
             </div>
         </div>
     </section>
