@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# Signalement de vulnérabilités — GLADS (www.glads.fr), RFC 9116
+Contact: mailto:contact@glads.fr
+Expires: 2027-09-25T00:00:00.000Z
+Encryption: openpgp4fpr:41C6DE51D5AFA96D19587A4499D50993F06ADCF8
+Encryption: https://openpgpkey.glads.fr/.well-known/openpgpkey/glads.fr/hu/dj3498u4hyyarh35rkjfnghbjxug6b19
+Preferred-Languages: fr, en
+Canonical: https://www.glads.fr/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQRHOW1+Q/R5LCz4nivjPfPzqvMOqQUCaraOmwAKCRDjPfPzqvMO
+qT0XAQDW7uO0N8UK7DBbDmbaUA9vVn9M4oLD194JMjiivFYO2QEAiZrASZB9xPM+
+DE6xRFPDrrpqlrYHd7uHpDb81Q/Fywk=
+=b5bI
+-----END PGP SIGNATURE-----

@@ -15,3 +15,10 @@ Site Hugo (gabarits propres dans `layouts/`, sans thème ; polices et icônes au
 - Après chaque déploiement, le job `indexnow` de `.github/workflows/hugo.yml` envoie les URL du sitemap (hors `/veille/`) à `api.indexnow.org`. Aucun compte n'est nécessaire.
 - La clé est publique par conception (ce n'est pas un secret) : `static/<clé>.txt`, dont le contenu est la clé elle-même. Pour la changer, renommer ce fichier et mettre à jour `INDEXNOW_KEY` dans le workflow.
 - Google n'utilise pas IndexNow.
+
+## security.txt (RFC 9116)
+
+- `static/.well-known/security.txt`, signé en clair avec la sous-clé [S] de contact@glads.fr.
+- **Expire le 2027-09-25** : avant cette date, mettre à jour `Expires:` (un an au plus) et re-signer :
+  `gpg --local-user '47396D7E43F4792C2CF89E2BE33DF3F3AAF30EA9!' --clearsign` sur le texte non signé.
+- À re-signer aussi après tout changement de clé ou d'adresse de la clé publique.
