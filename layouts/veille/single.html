@@ -16,9 +16,6 @@
         <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ "fonts/outfit/outfit.css" | relURL }}">
 
-    <link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}"></noscript>
-
     <style>
         :root {
             --bg-dark: #07090e;
@@ -165,6 +162,7 @@
             .content-card { padding: 2rem; }
             .content-card h1 { font-size: 1.8rem; }
         }
+        .icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
     </style>
 </head>
 <body>
@@ -175,7 +173,7 @@
             GLADS
         </a>
         <a href="{{ "veille/" | relURL }}" class="back-link">
-            <i class="bi bi-arrow-left"></i> Veille et revues
+            {{ partial "icon.html" "bi/arrow-left" }} Veille et revues
         </a>
     </nav>
 

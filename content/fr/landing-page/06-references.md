@@ -5,35 +5,35 @@ weight: 55
 
 <div class="sectors-grid">
   <div class="sector-badge">
-    <i class="bi bi-truck"></i>
+    {{< icon "bi/truck" >}}
     <div>
       <h4>Hopps Group / SPIR</h4>
       <span>Logistique & distribution</span>
     </div>
   </div>
   <div class="sector-badge">
-    <i class="bi bi-hospital"></i>
+    {{< icon "bi/hospital" >}}
     <div>
       <h4>APHM</h4>
       <span>Santé</span>
     </div>
   </div>
   <div class="sector-badge">
-    <i class="bi bi-graph-up-arrow"></i>
+    {{< icon "bi/graph-up-arrow" >}}
     <div>
       <h4>Seevibes</h4>
       <span>Média & Analytics</span>
     </div>
   </div>
   <div class="sector-badge">
-    <i class="bi bi-airplane-engines"></i>
+    {{< icon "bi/airplane-engines" >}}
     <div>
       <h4>Airbus Helicopters</h4>
       <span>Aéronautique</span>
     </div>
   </div>
   <a class="sector-badge" href="https://www.coeurartichaut.fr" target="_blank" rel="noopener">
-    <i class="bi bi-heart-pulse"></i>
+    {{< icon "bi/heart-pulse" >}}
     <div>
       <h4>Cœur Artichaut</h4>
       <span>Art-thérapie & bien-être</span>

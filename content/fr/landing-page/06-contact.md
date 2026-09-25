@@ -26,8 +26,8 @@ Vous avez un projet informatique ? Vous souhaitez moderniser votre système d'in
 
 Société de conseil informatique — EURL au capital de 1 000 euros
 
-<i class="bi bi-geo-alt-fill"></i> **Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
+{{< icon "bi/geo-alt-fill" >}} **Siège social :** 83470 Saint-Maximin-la-Sainte-Baume
 
-<i class="bi bi-envelope-fill"></i> **Email :** [contact@glads.fr](mailto:contact@glads.fr) · [Clé publique PGP](https://openpgpkey.glads.fr/.well-known/openpgpkey/glads.fr/hu/dj3498u4hyyarh35rkjfnghbjxug6b19) (empreinte `41C6 DE51 D5AF A96D 1958  7A44 99D5 0993 F06A DCF8`)
+{{< icon "bi/envelope-fill" >}} **Email :** [contact@glads.fr](mailto:contact@glads.fr) · [Clé publique PGP](https://openpgpkey.glads.fr/.well-known/openpgpkey/glads.fr/hu/dj3498u4hyyarh35rkjfnghbjxug6b19) (empreinte `41C6 DE51 D5AF A96D 1958  7A44 99D5 0993 F06A DCF8`)
 
-<i class="bi bi-linkedin"></i> **LinkedIn :** [GLADS](https://www.linkedin.com/company/glads-linked/)
+{{< icon "bi/linkedin" >}} **LinkedIn :** [GLADS](https://www.linkedin.com/company/glads-linked/)

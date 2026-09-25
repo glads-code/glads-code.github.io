@@ -32,12 +32,6 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ "fonts/outfit/outfit.css" | relURL }}">
 
-    <!-- Icons (non-bloquant) -->
-    <link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}"></noscript>
-    <link rel="stylesheet" href="{{ "vendor/devicon/devicon.min.css" | relURL }}" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ "vendor/devicon/devicon.min.css" | relURL }}"></noscript>
-
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -282,10 +276,7 @@
 
         .service-icon {
             font-size: 3rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            fill: url(#icon-gradient);
             margin-bottom: 1.5rem; display: inline-block;
             transition: transform 0.4s ease;
         }
@@ -352,7 +343,7 @@
 
         .tech-item:hover { opacity: 1; transform: translateY(-8px); filter: grayscale(0%); }
 
-        .tech-item i { font-size: 4rem; margin-bottom: 0.8rem; }
+        .tech-item .icon { font-size: 4rem; margin-bottom: 0.8rem; }
 
         .tech-item span { font-size: 1rem; font-weight: 600; color: var(--text-main); }
 
@@ -377,7 +368,7 @@
             transform: scale(1.02);
         }
 
-        .sector-badge i { font-size: 2rem; color: var(--accent-primary); flex-shrink: 0; }
+        .sector-badge .icon { font-size: 2rem; color: var(--accent-primary); flex-shrink: 0; }
 
         .sector-badge h4 { font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 700; }
 
@@ -410,10 +401,7 @@
 
         .footer-info h2 {
             font-size: 2.5rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            fill: url(#icon-gradient);
             margin-bottom: 1rem; font-weight: 900;
         }
 
@@ -427,7 +415,7 @@
             transition: all 0.3s ease; font-size: 1.1rem;
         }
 
-        .contact-link i { font-size: 1.5rem; color: var(--accent-primary); }
+        .contact-link .icon { font-size: 1.5rem; color: var(--accent-primary); }
 
         .contact-link:hover { color: var(--accent-primary); transform: translateX(5px); }
 
@@ -549,7 +537,7 @@
             font-weight: 500;
         }
 
-        .partner-badge i { color: var(--accent-primary); }
+        .partner-badge .icon { color: var(--accent-primary); }
 
         @media (max-width: 900px) {
             .nav-links { display: none; }
@@ -558,9 +546,29 @@
             .tech-track { gap: 2.5rem; }
             .partner-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
         }
+        .icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
+        /* Couleurs des logos (reprises de Devicon 2.15.1) */
+        .icon-devicon-csharp-plain { color: #68217a; }
+        .icon-devicon-go-original-wordmark { color: #00acd7; }
+        .icon-devicon-rust-plain { color: #000; }
+        .icon-devicon-postgresql-plain { color: #336791; }
+        .icon-devicon-microsoftsqlserver-plain { color: #909daa; }
+        .icon-devicon-oracle-original { color: #ea1b22; }
+        .icon-devicon-azure-plain { color: #0089d6; }
+        .icon-devicon-kubernetes-plain { color: #486bb3; }
+        .icon-devicon-docker-plain { color: #019bc6; }
+        .icon-devicon-git-plain { color: #f34f29; }
     </style>
 </head>
 <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="icon-gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3b82f6"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+        </defs>
+    </svg>
 
     {{ $lp := .Site.GetPage "landing-page" }}
     {{ $pages := $lp.Pages.ByWeight }}
@@ -593,7 +601,7 @@
         <h1>{{ .Params.hero_h1 | safeHTML }}</h1>
         <p>{{ .Description }}</p>
         <a href="mailto:contact@glads.fr?subject=D%C3%A9marrer%20un%20projet&body=Bonjour%20Guillaume%2C%0A%0AJe%20souhaite%20vous%20contacter%20concernant%20un%20projet.%0A%0AContexte%20%3A%20%0A" class="btn-primary">
-            {{ .Params.cta_text }} <i class="bi bi-arrow-right"></i>
+            {{ .Params.cta_text }} {{ partial "icon.html" "bi/arrow-right" }}
         </a>
     </section>
 
@@ -611,11 +619,11 @@
         <div class="services-grid">
             {{ range $cards }}
             <div class="service-card" onmousemove="handleMouseMove(event)">
-                <i class="bi {{ .Params.icon }} service-icon"></i>
+                {{ partial "icon.html" (dict "name" (printf "bi/%s" (strings.TrimPrefix "bi-" .Params.icon)) "class" "service-icon") }}
                 <h3>{{ .Title }}</h3>
                 {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
                 {{ .Content }}
-                {{ with .Params.page }}<a href="{{ . | relURL }}" class="card-more">En savoir plus <i class="bi bi-arrow-right"></i></a>{{ end }}
+                {{ with .Params.page }}<a href="{{ . | relURL }}" class="card-more">En savoir plus {{ partial "icon.html" "bi/arrow-right" }}</a>{{ end }}
             </div>
             {{ end }}
         </div>
@@ -655,13 +663,13 @@
             </div>
             <div class="partner-content">
                 <div class="partner-badge">
-                    <i class="bi bi-patch-check-fill"></i> Partenaire de confiance
+                    {{ partial "icon.html" "bi/patch-check-fill" }} Partenaire de confiance
                 </div>
                 <h3>{{ .Title }}</h3>
                 {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
                 {{ .Content }}
                 <a href="{{ $pUrl }}" target="_blank" rel="noopener sponsored" class="btn-primary">
-                    {{ .Params.partner_cta }} <i class="bi bi-box-arrow-up-right"></i>
+                    {{ .Params.partner_cta }} {{ partial "icon.html" "bi/box-arrow-up-right" }}
                 </a>
                 <p class="partner-disclosure">Lien d'affiliation : GLADS peut percevoir une commission, sans surcoût pour vous. <a href="{{ "mentions-legales/" | relURL }}">En savoir plus</a></p>
             </div>
@@ -685,20 +693,20 @@
             <div class="contact-links">
                 <h4 style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">Contactez-nous</h4>
                 <a href="mailto:contact@glads.fr" class="contact-link">
-                    <i class="bi bi-envelope-at-fill"></i>
+                    {{ partial "icon.html" "bi/envelope-at-fill" }}
                     <span>contact@glads.fr</span>
                 </a>
                 {{ partial "contact-actions.html" . }}
                 <a href="https://openpgpkey.glads.fr/.well-known/openpgpkey/glads.fr/hu/dj3498u4hyyarh35rkjfnghbjxug6b19" class="contact-link" style="font-size: 0.95rem; opacity: 0.75;">
-                    <i class="bi bi-key-fill"></i>
+                    {{ partial "icon.html" "bi/key-fill" }}
                     <span>Clé PGP publique</span>
                 </a>
                 <div class="contact-link" style="cursor: default;">
-                    <i class="bi bi-geo-alt-fill"></i>
+                    {{ partial "icon.html" "bi/geo-alt-fill" }}
                     <span>83470 Saint-Maximin-la-Sainte-Baume</span>
                 </div>
                 <a href="https://www.linkedin.com/company/glads-linked/" target="_blank" class="contact-link">
-                    <i class="bi bi-linkedin"></i>
+                    {{ partial "icon.html" "bi/linkedin" }}
                     <span>Page LinkedIn Officielle</span>
                 </a>
             </div>

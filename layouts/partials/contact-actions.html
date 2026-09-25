@@ -1,8 +1,8 @@
 {{/* Solutions de repli au lien mailto: (webmail, pas de logiciel de messagerie) : copier l'adresse ou enregistrer la fiche contact. */}}
 <div class="contact-actions">
     <code class="contact-address">contact@glads.fr</code>
-    <button type="button" class="contact-action" data-copy="contact@glads.fr"><i class="bi bi-clipboard"></i> <span>Copier l'adresse</span></button>
-    <a class="contact-action" href="{{ "glads.vcf" | relURL }}" download><i class="bi bi-person-vcard"></i> <span>Enregistrer le contact</span></a>
+    <button type="button" class="contact-action" data-copy="contact@glads.fr">{{ partial "icon.html" "bi/clipboard" }} <span>Copier l'adresse</span></button>
+    <a class="contact-action" href="{{ "glads.vcf" | relURL }}" download>{{ partial "icon.html" "bi/person-vcard" }} <span>Enregistrer le contact</span></a>
 </div>
 {{/* Appelé une seule fois par page : styles et script inclus directement. */}}
 <style>

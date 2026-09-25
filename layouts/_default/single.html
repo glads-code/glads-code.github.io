@@ -17,9 +17,6 @@
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ "fonts/outfit/outfit.css" | relURL }}">
 
-    <link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}"></noscript>
-
     <style>
         :root {
             --bg-dark: #07090e;
@@ -166,6 +163,7 @@
             .content-card { padding: 2rem; }
             .content-card h1 { font-size: 1.8rem; }
         }
+        .icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
     </style>
 </head>
 <body>
@@ -176,7 +174,7 @@
             GLADS
         </a>
         <a href="{{ .Site.BaseURL }}" class="back-link">
-            <i class="bi bi-arrow-left"></i> Retour à l'accueil
+            {{ partial "icon.html" "bi/arrow-left" }} Retour à l'accueil
         </a>
     </nav>
 
@@ -188,7 +186,7 @@
             <div class="offer-cta">
                 <h2>Parlons de votre projet</h2>
                 <p>Un premier échange est gratuit et sans engagement.</p>
-                <a href="{{ printf "mailto:contact@glads.fr?subject=%s" (replace (urlquery .Title) "+" "%20") | safeURL }}" class="btn-primary">Me contacter <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ printf "mailto:contact@glads.fr?subject=%s" (replace (urlquery .Title) "+" "%20") | safeURL }}" class="btn-primary">Me contacter {{ partial "icon.html" "bi/arrow-right" }}</a>
                 {{ partial "contact-actions.html" . }}
             </div>
             <h2>Nos autres offres</h2>
