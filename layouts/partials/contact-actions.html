@@ -4,7 +4,7 @@
     <button type="button" class="contact-action" data-copy="contact@glads.fr">{{ partial "icon.html" "bi/clipboard" }} <span>Copier l'adresse</span></button>
     <a class="contact-action" href="{{ "glads.vcf" | relURL }}" download>{{ partial "icon.html" "bi/person-vcard" }} <span>Enregistrer le contact</span></a>
 </div>
-{{/* Appelé une seule fois par page : styles et script inclus directement. */}}
+{{/* Appelé une seule fois par page. Le bouton « Copier » est géré par static/js/site.js. */}}
 <style>
     .contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 1rem; }
     .contact-links .contact-address { display: none; }
@@ -13,17 +13,3 @@
     .contact-actions .contact-action { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 999px; border: 1px solid var(--glass-border); background: transparent; color: var(--text-muted); font: inherit; font-size: 0.85rem; cursor: pointer; text-decoration: none; transition: color 0.2s, border-color 0.2s; }
     .contact-actions .contact-action:hover, .contact-actions .contact-action:focus-visible { color: var(--accent-primary); border-color: var(--accent-primary); }
 </style>
-<script>
-    document.addEventListener('click', async (e) => {
-        const btn = e.target.closest('[data-copy]');
-        if (!btn) return;
-        const label = btn.querySelector('span');
-        try {
-            await navigator.clipboard.writeText(btn.dataset.copy);
-            label.textContent = 'Adresse copiée';
-        } catch {
-            label.textContent = 'Sélectionnez l\'adresse';
-        }
-        setTimeout(() => { label.textContent = 'Copier l\'adresse'; }, 2500);
-    });
-</script>
