@@ -189,6 +189,7 @@
                 <h2>Parlons de votre projet</h2>
                 <p>Un premier échange est gratuit et sans engagement.</p>
                 <a href="{{ printf "mailto:contact@glads.fr?subject=%s" (replace (urlquery .Title) "+" "%20") | safeURL }}" class="btn-primary">Me contacter <i class="bi bi-arrow-right"></i></a>
+                {{ partial "contact-actions.html" . }}
             </div>
             <h2>Nos autres offres</h2>
             <ul>
