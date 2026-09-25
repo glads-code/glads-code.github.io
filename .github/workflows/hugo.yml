@@ -67,3 +67,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Signale les URL du sitemap à Bing, Yandex, Seznam et Naver via IndexNow
+  # (sans compte). La clé est publique par conception : static/955f860bbb6a278ba995319f8ce0b616.txt.
+  indexnow:
+    runs-on: ubuntu-24.04
+    needs: deploy
+    env:
+      INDEXNOW_KEY: 955f860bbb6a278ba995319f8ce0b616
+    steps:
+      - name: Notify IndexNow
+        run: |
+          urls=$(curl -fsS https://www.glads.fr/sitemap.xml \
+            | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g' \
+            | grep -v '/veille/')
+          body=$(printf '%s\n' "$urls" | jq -R . | jq -s \
+            --arg key "$INDEXNOW_KEY" \
+            '{host: "www.glads.fr", key: $key, keyLocation: ("https://www.glads.fr/" + $key + ".txt"), urlList: .}')
+          echo "$body"
+          curl -fsS -o /dev/null -w 'IndexNow HTTP %{http_code}\n' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$body" https://api.indexnow.org/indexnow
