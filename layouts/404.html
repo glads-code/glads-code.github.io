@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page introuvable — GLADS</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ "fonts/outfit/outfit.css" | relURL }}">
+    {{ partial "page-style.html" . }}
+</head>
+<body>
+
+    <nav>
+        <a href="{{ "/" | relURL }}" class="logo">
+            <img src="{{ "img/logo.png" | relURL }}" alt="Logo GLADS" class="logo-img">
+            GLADS
+        </a>
+        <a href="{{ "/" | relURL }}" class="back-link">
+            {{ partial "icon.html" "bi/arrow-left" }} Retour à l'accueil
+        </a>
+    </nav>
+
+    <main>
+        <div class="content-card">
+            <h1>Cette page n'existe pas</h1>
+            <p>Le lien que vous avez suivi est peut-être incomplet, ou la page a été déplacée. Voici où trouver ce que vous cherchez :</p>
+            <ul>
+                <li><a href="{{ "/" | relURL }}">L'accueil de GLADS</a></li>
+                {{ range where .Site.RegularPages "Section" "offres" }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+            <div class="offer-cta">
+                <h2>Une question ?</h2>
+                <p>Écrivez-nous, nous vous orienterons.</p>
+                <a href="mailto:contact@glads.fr" class="btn-primary">Nous écrire {{ partial "icon.html" "bi/arrow-right" }}</a>
+                {{ partial "contact-actions.html" . }}
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; {{ now.Year }} GLADS — Guillaume Laurent Architecture Développement Sécurité</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="{{ "/" | relURL }}">Accueil</a> ·
+            <a href="{{ "mentions-legales/" | relURL }}">Mentions légales</a> ·
+            <a href="mailto:contact@glads.fr">contact@glads.fr</a>
+        </p>
+    </footer>
+
+</body>
+</html>
