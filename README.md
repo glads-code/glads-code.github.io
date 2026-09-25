@@ -1,6 +1,6 @@
 # Site www.glads.fr
 
-Site Hugo (thème `air`), déployé sur GitHub Pages par `.github/workflows/` à chaque push sur `main` (le dossier `public/` n'est pas versionné).
+Site Hugo (gabarits propres dans `layouts/`, sans thème ; polices et icônes auto-hébergées dans `static/`, aucune ressource tierce), déployé sur GitHub Pages par `.github/workflows/` à chaque push sur `main` (le dossier `public/` n'est pas versionné).
 
 ## Section /veille/ (non référencée)
 

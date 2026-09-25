@@ -1,6 +1,5 @@
 baseURL = "https://www.glads.fr"
 title = "GLADS | Architecture · Développement · Sécurité · Informatique"
-theme = "air"
 defaultContentLanguage = "fr"
 
 enableRobotsTXT = true
@@ -16,23 +15,6 @@ disableKinds = ["taxonomy", "term", "section"]
     contentDir = "content/fr"
     languageName = "Français"
     weight = 1
-
-  [[languages.fr.menus.main]]
-    name = "Accueil"
-    pageRef = "/"
-    weight = 10
-
-  [[languages.fr.menus.footer]]
-    name = "GLADS"
-    pageRef = "/"
-    weight = 10
-
-[params]
-  mainColor = "#1b4f72"
-  footer = "GLADS - Guillaume Laurent Architecture Développement Sécurité - EURL au capital de 1 000 euros"
-  [params.author]
-    name = "Guillaume Laurent"
-    siteUrl = "https://www.glads.fr/"
 
 [markup]
   [markup.goldmark]
