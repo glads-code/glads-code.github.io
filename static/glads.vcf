@@ -8,5 +8,5 @@ TEL;VALUE=uri;TYPE=work,voice:tel:+33760413603
 ADR;TYPE=work:;;448 chemin des Terriers;Saint-Maximin-la-Sainte-Baume;;83470;France
 URL:https://www.glads.fr/
 URL;TYPE=linkedin:https://www.linkedin.com/company/glads-linked/
-KEY:https://www.glads.fr/public.asc
+KEY:https://openpgpkey.glads.fr/.well-known/openpgpkey/glads.fr/hu/dj3498u4hyyarh35rkjfnghbjxug6b19
 END:VCARD
