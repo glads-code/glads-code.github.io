@@ -1,0 +1,10 @@
+# Prévient chaque mois des nouvelles versions des actions GitHub épinglées
+# par empreinte de commit dans .github/workflows/.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "CI"

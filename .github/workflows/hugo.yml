@@ -34,16 +34,18 @@ jobs:
       HUGO_VERSION: 0.166.0
     steps:
       - name: Install Hugo CLI
+        # Vérifie l'empreinte SHA-256 publiée par Hugo avant d'installer le paquet.
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          cd ${{ runner.temp }}
+          base=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}
+          wget -q $base/hugo_extended_${HUGO_VERSION}_linux-amd64.deb $base/hugo_${HUGO_VERSION}_checksums.txt
+          sha256sum --check --ignore-missing --strict hugo_${HUGO_VERSION}_checksums.txt
+          sudo dpkg -i hugo_extended_${HUGO_VERSION}_linux-amd64.deb
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
@@ -52,7 +54,7 @@ jobs:
           hugo \
             --minify
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: ./public
 
@@ -66,7 +68,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
 
   # Signale les URL du sitemap à Bing, Yandex, Seznam et Naver via IndexNow
   # (sans compte). La clé est publique par conception : static/955f860bbb6a278ba995319f8ce0b616.txt.
