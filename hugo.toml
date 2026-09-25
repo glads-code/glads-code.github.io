@@ -11,9 +11,9 @@ disableKinds = ["taxonomy", "term", "section"]
 
 [languages]
   [languages.fr]
-    languageCode = "fr-FR"
+    locale = "fr-FR"
     contentDir = "content/fr"
-    languageName = "Français"
+    label = "Français"
     weight = 1
 
 [markup]
