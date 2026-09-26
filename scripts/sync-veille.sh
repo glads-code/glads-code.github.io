@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Copie les résumés et revues du dépôt privé glads-code/veille-techno
 # vers content/fr/veille/ (pages publiées sous /veille/, en noindex).
+# Les passages entre les lignes <!-- prive --> et <!-- /prive --> (détail des failles et
+# écarts de conformité) restent dans le dépôt privé et ne sont pas publiés.
 # Usage : scripts/sync-veille.sh <chemin du clone veille-techno>
 set -euo pipefail
 src=${1:?chemin du dépôt veille-techno}
@@ -13,7 +15,10 @@ convert() { # $1 source, $2 destination, $3 date ISO
   {
     printf -- '---\ntitle: "%s"\ndate: %s\nsitemap:\n  disable: true\n---\n\n' "$title" "$3"
     # le titre est affiché par le layout : on retire le premier H1
-    awk '!done && /^# /{done=1; next} {print}' "$1"
+    awk '!done && /^# /{done=1; next}
+         /^<!-- *prive *-->[[:space:]]*$/{skip=1; next}
+         /^<!-- *\/prive *-->[[:space:]]*$/{skip=0; next}
+         !skip{print}' "$1"
   } > "$2"
 }
 
