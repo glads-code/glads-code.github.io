@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Robots d'entraînement des IA : pas de corpus à partir des pages de travail /veille/.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+Disallow: /veille/
+
 Sitemap: {{ "sitemap.xml" | absURL }}
