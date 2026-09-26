@@ -48,7 +48,13 @@ Le site étant hébergé sur GitHub Pages, GitHub, Inc. enregistre l'adresse IP 
 
 ### Vos données transmises par email
 
-Les seules données susceptibles d'être traitées sont celles que vous transmettez volontairement par email à [contact@glads.fr](mailto:contact@glads.fr). Elles sont utilisées uniquement pour répondre à votre demande et ne sont ni vendues ni cédées à des tiers. La messagerie est hébergée par Infomaniak Network SA en Suisse, pays reconnu par la Commission européenne comme offrant un niveau de protection adéquat.
+Les seules données susceptibles d'être traitées sont celles que vous transmettez volontairement par email à [contact@glads.fr](mailto:contact@glads.fr). Elles sont utilisées uniquement pour répondre à votre demande et ne sont ni vendues ni cédées à des tiers. Elles sont confiées aux seuls prestataires décrits ci-dessous. La messagerie est hébergée par Infomaniak Network SA en Suisse, pays reconnu par la Commission européenne comme offrant un niveau de protection adéquat.
+
+### Tri automatique des emails reçus
+
+Pour repérer rapidement les demandes qui attendent une réponse, les emails reçus sur [contact@glads.fr](mailto:contact@glads.fr) sont lus par un service d'intelligence artificielle, Claude, fourni par Anthropic, PBC (États-Unis). Seuls l'expéditeur, le sujet et le début du message (8 000 premiers octets) lui sont transmis, uniquement pour classer l'email (« important » ou non) et, une fois par semaine, repérer les emails périmés (publicités, rendez-vous passés). L'option qui autorise Anthropic à utiliser ces échanges pour entraîner ses modèles est désactivée : Anthropic les conserve au plus 30 jours. Ces données peuvent donc être traitées aux États-Unis. Pour en savoir plus : [politique de confidentialité d'Anthropic](https://www.anthropic.com/legal/privacy).
+
+Base légale : intérêt légitime de GLADS à traiter les demandes reçues dans les meilleurs délais. Vous pouvez vous opposer à ce tri à tout moment en l'indiquant dans votre email ou en écrivant à [contact@glads.fr](mailto:contact@glads.fr) : vos emails seront alors exclus du tri automatique.
 
 Conformément au Règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour exercer ces droits : [contact@glads.fr](mailto:contact@glads.fr). Vous pouvez aussi adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr)).
 
