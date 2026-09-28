@@ -3,6 +3,13 @@ title: Conseil et architecture logicielle
 seo_title: "Architecte logiciel, conseil et audit en PACA | GLADS"
 description: "Audit technique, feuille de route et architecture logicielle (CQRS, Event Sourcing, microservices) pour les entreprises du Var, de PACA et de toute la France."
 weight: 10
+faq:
+  - q: "Combien de temps dure un audit ?"
+    r: "De quelques jours à deux semaines selon la taille du système."
+  - q: "Intervenez-vous à distance ?"
+    r: "Oui, partout en France. Les rendez-vous sur site sont possibles dans le Var, les Bouches-du-Rhône et en région PACA."
+  - q: "Travaillez-vous avec des équipes existantes ?"
+    r: "Oui, l'objectif est aussi de transmettre les compétences à vos équipes."
 ---
 
 **Un audit d'architecture GLADS dure de quelques jours à deux semaines selon la taille du système. Il livre une cartographie de l'existant, des recommandations chiffrées et un plan d'action priorisé.**
@@ -34,11 +41,3 @@ Votre application ralentit, chaque évolution coûte plus cher que la précéden
 - Rapport d'audit et cartographie de l'existant.
 - Schémas d'architecture cible et décisions documentées.
 - Feuille de route priorisée, avec estimation des charges.
-
-## Questions fréquentes
-
-**Combien de temps dure un audit ?** De quelques jours à deux semaines selon la taille du système.
-
-**Intervenez-vous à distance ?** Oui, partout en France. Les rendez-vous sur site sont possibles dans le Var, les Bouches-du-Rhône et en région PACA.
-
-**Travaillez-vous avec des équipes existantes ?** Oui, l'objectif est aussi de transmettre les compétences à vos équipes.

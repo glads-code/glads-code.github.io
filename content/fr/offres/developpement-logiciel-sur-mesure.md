@@ -3,6 +3,13 @@ title: Développement logiciel sur mesure
 seo_title: "Développement logiciel sur mesure en PACA | GLADS"
 description: "Développement d'applications métier, SaaS et API en C#/.NET, Go et Rust. Qualité, maintenabilité et performance, pour les entreprises de PACA et de France."
 weight: 20
+faq:
+  - q: "Quelles technologies utilisez-vous ?"
+    r: "Principalement C#/.NET, Go et Rust, avec PostgreSQL, SQL Server ou Oracle, sur Azure, Kubernetes ou un cloud souverain."
+  - q: "Pouvez-vous reprendre un logiciel existant ?"
+    r: "Oui, après un audit rapide pour évaluer son état et les risques."
+  - q: "À qui appartient le code ?"
+    r: "À vous. Le code source et la documentation vous sont livrés."
 ---
 
 **GLADS développe des logiciels métier, des applications web et des SaaS en C#/.NET, Go et Rust, par livraisons courtes. Le code source et la documentation vous appartiennent et vous sont livrés.**
@@ -34,11 +41,3 @@ Un logiciel métier, une application web ou un produit SaaS doit durer. GLADS co
 - Code lisible, testé et documenté, que vos équipes peuvent reprendre.
 - Des choix technologiques justifiés, sans dépendance inutile.
 - Expérience de projets allant jusqu'à 45 000 jours/homme.
-
-## Questions fréquentes
-
-**Quelles technologies utilisez-vous ?** Principalement C#/.NET, Go et Rust, avec PostgreSQL, SQL Server ou Oracle, sur Azure, Kubernetes ou un cloud souverain.
-
-**Pouvez-vous reprendre un logiciel existant ?** Oui, après un audit rapide pour évaluer son état et les risques.
-
-**À qui appartient le code ?** À vous. Le code source et la documentation vous sont livrés.

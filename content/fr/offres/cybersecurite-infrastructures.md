@@ -3,6 +3,13 @@ title: Cybersécurité et infrastructures cloud
 seo_title: "Audit cybersécurité et cloud dans le Var | GLADS"
 description: "Audit de cybersécurité, sécurisation des applications, cloud Azure et Kubernetes, haute disponibilité. Cabinet basé dans le Var, interventions en PACA et en France."
 weight: 30
+faq:
+  - q: "Faites-vous des tests d'intrusion ?"
+    r: "Les audits combinent analyse de configuration, revue de code et tests ciblés, dans un cadre défini avec vous."
+  - q: "Travaillez-vous avec un cloud souverain ?"
+    r: "Oui, en particulier avec Infomaniak, hébergeur suisse, partenaire de GLADS."
+  - q: "Pouvez-vous former nos équipes ?"
+    r: "Oui, sous forme d'ateliers pratiques adaptés à votre contexte."
 ---
 
 **Un audit de cybersécurité GLADS analyse vos applications et votre infrastructure, sur site ou à distance, puis livre un rapport où chaque vulnérabilité est classée par gravité, avec sa correction concrète.**
@@ -29,11 +36,3 @@ Une faille ou une panne coûte cher, en argent comme en confiance. GLADS place l
 2. **Audit** : analyse technique et entretiens.
 3. **Rapport** : vulnérabilités classées par gravité, avec corrections concrètes.
 4. **Remédiation** : accompagnement des corrections et vérification.
-
-## Questions fréquentes
-
-**Faites-vous des tests d'intrusion ?** Les audits combinent analyse de configuration, revue de code et tests ciblés, dans un cadre défini avec vous.
-
-**Travaillez-vous avec un cloud souverain ?** Oui, en particulier avec Infomaniak, hébergeur suisse, partenaire de GLADS.
-
-**Pouvez-vous former nos équipes ?** Oui, sous forme d'ateliers pratiques adaptés à votre contexte.
