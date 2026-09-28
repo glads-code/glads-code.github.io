@@ -24,6 +24,10 @@ description: "Mentions légales de GLADS — Guillaume Laurent Architecture Dév
 
 Ce site est hébergé par **GitHub Pages**, service de **GitHub, Inc.** (filiale de Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — téléphone : +1 877 448 4820 — [github.com](https://github.com).
 
+### Test de débit : speed.glads-code.fr
+
+Le service de test de débit [speed.glads-code.fr](https://speed.glads-code.fr) est hébergé par **GLADS** elle-même, sur un serveur qu'elle exploite en France (coordonnées ci-dessus, rubrique « Éditeur du site »).
+
 ### Partenaire infrastructure : Infomaniak
 
 **Infomaniak Network SA**, Rue Eugène-Marziano 25, 1227 Les Acacias (Genève), Suisse — téléphone : +41 22 820 35 44 — [www.infomaniak.com](https://www.infomaniak.com).
@@ -45,6 +49,12 @@ Ce site ne collecte aucune donnée personnelle directement. Aucun formulaire, au
 ### Journaux de l'hébergeur
 
 Le site étant hébergé sur GitHub Pages, GitHub, Inc. enregistre l'adresse IP de chaque visiteur dans ses journaux techniques, afin d'assurer la sécurité et le bon fonctionnement du service. GLADS n'a pas accès à ces journaux. Ces données peuvent être traitées aux États-Unis ; GitHub, Inc. est certifiée au titre du cadre de protection des données UE–États-Unis (Data Privacy Framework). Pour en savoir plus : [déclaration de confidentialité de GitHub](https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement).
+
+### Test de débit (speed.glads-code.fr)
+
+Le test de débit repose sur le logiciel libre [LibreSpeed](https://github.com/librespeed/speedtest). Il ne dépose aucun cookie, n'utilise aucun outil de mesure d'audience et ne conserve aucun résultat : le débit mesuré n'est affiché qu'à vous. Pour fonctionner, le test échange des données entre votre navigateur et le serveur de GLADS, qui voit donc votre adresse IP.
+
+Comme tout serveur web, celui de GLADS enregistre dans ses journaux techniques l'adresse IP, la date et les pages demandées, afin d'assurer la sécurité et le bon fonctionnement du service. Ces journaux restent sur le serveur de GLADS, ne sont transmis à personne et sont supprimés au bout de **30 jours** au plus. Base légale : intérêt légitime de GLADS à sécuriser son service.
 
 ### Vos données transmises par email
 
