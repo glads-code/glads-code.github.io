@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 
+# Robots de recherche des IA (réponses avec citation de la source) : bienvenus.
+# Nommés pour que ce choix reste visible et ne soit pas fermé par mégarde.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+Allow: /
+
 # Robots d'entraînement des IA : pas de corpus à partir des pages de travail /veille/.
 User-agent: GPTBot
 User-agent: ClaudeBot
