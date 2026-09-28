@@ -5,6 +5,8 @@ description: "Audit technique, feuille de route et architecture logicielle (CQRS
 weight: 10
 ---
 
+**Un audit d'architecture GLADS dure de quelques jours à deux semaines selon la taille du système. Il livre une cartographie de l'existant, des recommandations chiffrées et un plan d'action priorisé.**
+
 Votre application ralentit, chaque évolution coûte plus cher que la précédente, ou vous devez choisir une architecture pour un nouveau produit ? GLADS vous aide à prendre les bonnes décisions techniques, avec plus de 15 ans d'expérience acquise au sein de grands groupes.
 
 ## Pour qui ?

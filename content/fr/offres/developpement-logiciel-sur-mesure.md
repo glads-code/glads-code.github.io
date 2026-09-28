@@ -5,6 +5,8 @@ description: "Développement d'applications métier, SaaS et API en C#/.NET, Go 
 weight: 20
 ---
 
+**GLADS développe des logiciels métier, des applications web et des SaaS en C#/.NET, Go et Rust, par livraisons courtes. Le code source et la documentation vous appartiennent et vous sont livrés.**
+
 Un logiciel métier, une application web ou un produit SaaS doit durer. GLADS conçoit et développe des logiciels maintenables, testés et performants, en C#/.NET, Go, Rust ou C.
 
 ## Pour qui ?

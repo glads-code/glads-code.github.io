@@ -5,6 +5,8 @@ description: "Audit de cybersécurité, sécurisation des applications, cloud Az
 weight: 30
 ---
 
+**Un audit de cybersécurité GLADS analyse vos applications et votre infrastructure, sur site ou à distance, puis livre un rapport où chaque vulnérabilité est classée par gravité, avec sa correction concrète.**
+
 Une faille ou une panne coûte cher, en argent comme en confiance. GLADS place la sécurité et la fiabilité au cœur de vos systèmes, de l'audit jusqu'à l'exploitation.
 
 ## Pour qui ?
