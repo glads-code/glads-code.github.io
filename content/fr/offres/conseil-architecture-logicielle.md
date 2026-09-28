@@ -1,5 +1,6 @@
 ---
 title: Conseil et architecture logicielle
+seo_title: "Architecte logiciel, conseil et audit en PACA | GLADS"
 description: "Audit technique, feuille de route et architecture logicielle (CQRS, Event Sourcing, microservices) pour les entreprises du Var, de PACA et de toute la France."
 weight: 10
 ---

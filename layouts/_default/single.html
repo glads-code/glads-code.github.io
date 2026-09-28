@@ -6,13 +6,13 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <script src="{{ "js/site.js" | relURL }}" defer></script>
-    <title>{{ .Title }} — GLADS</title>
+    <title>{{ .Params.seo_title | default (printf "%s — GLADS" .Title) }}</title>
     <meta name="description" content="{{ .Description | default .Site.Params.description }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="GLADS">
-    <meta property="og:title" content="{{ .Title }} — GLADS">
+    <meta property="og:title" content="{{ .Params.seo_title | default (printf "%s — GLADS" .Title) }}">
     <meta property="og:description" content="{{ .Description }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ "img/og-glads.png" | absURL }}">

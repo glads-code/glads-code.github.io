@@ -1,5 +1,6 @@
 ---
 title: Cybersécurité et infrastructures cloud
+seo_title: "Audit cybersécurité et cloud dans le Var | GLADS"
 description: "Audit de cybersécurité, sécurisation des applications, cloud Azure et Kubernetes, haute disponibilité. Cabinet basé dans le Var, interventions en PACA et en France."
 weight: 30
 ---

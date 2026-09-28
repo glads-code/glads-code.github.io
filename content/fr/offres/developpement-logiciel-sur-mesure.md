@@ -1,5 +1,6 @@
 ---
 title: Développement logiciel sur mesure
+seo_title: "Développement logiciel sur mesure en PACA | GLADS"
 description: "Développement d'applications métier, SaaS et API en C#/.NET, Go et Rust. Qualité, maintenabilité et performance, pour les entreprises de PACA et de France."
 weight: 20
 ---

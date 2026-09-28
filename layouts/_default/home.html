@@ -6,14 +6,14 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <script src="{{ "js/site.js" | relURL }}" defer></script>
-    <title>GLADS — Conseil IT · Ingénierie Logicielle · Cybersécurité — Saint-Maximin, Var</title>
+    <title>{{ .Params.seo_title }}</title>
     <meta name="description" content="{{ .Description }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:title" content="GLADS — Conseil IT · Architecture · Développement · Sécurité">
+    <meta property="og:title" content="{{ .Params.seo_title }}">
     <meta property="og:description" content="{{ .Description }}">
     <meta property="og:site_name" content="GLADS">
     <meta property="og:locale" content="fr_FR">
@@ -182,7 +182,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            font-size: clamp(2.2rem, 5vw, 4.5rem);
             font-weight: 900; line-height: 1.1;
             margin-bottom: 1.5rem;
             max-width: 1000px; letter-spacing: -1px;
@@ -193,6 +193,12 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .hero .hero-slogan {
+            font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+            font-weight: 700; color: var(--text-main);
+            margin-bottom: 1rem;
         }
 
         .hero p {
@@ -657,6 +663,7 @@
     <section class="hero">
         <div class="hero-badge">{{ .Params.hero_badge }}</div>
         <h1>{{ .Params.hero_h1 | safeHTML }}</h1>
+        <p class="hero-slogan">{{ .Params.hero_slogan }}</p>
         <p>{{ .Description }}</p>
         <a href="mailto:contact@glads.fr?subject=D%C3%A9marrer%20un%20projet&body=Bonjour%20Guillaume%2C%0A%0AJe%20souhaite%20vous%20contacter%20concernant%20un%20projet.%0A%0AContexte%20%3A%20%0A" class="btn-primary">
             {{ .Params.cta_text }} {{ partial "icon.html" "bi/arrow-right" }}
