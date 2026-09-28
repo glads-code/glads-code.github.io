@@ -6,6 +6,17 @@ enableRobotsTXT = true
 enableGitInfo = true
 disableKinds = ["taxonomy", "term", "section"]
 
+# /llms.txt : résumé du site pour les agents IA, généré depuis le contenu
+# (layouts/home.llms.txt).
+[outputFormats.llms]
+  baseName = "llms"
+  mediaType = "text/plain"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["html", "rss", "llms"]
+
 [frontmatter]
   lastmod = [":git", "lastmod", ":fileModTime"]
 

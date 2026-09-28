@@ -1,0 +1,16 @@
+{{- $offres := sort (where .Site.RegularPages "Section" "offres") "Weight" -}}
+# GLADS
+
+> {{ .Params.en_bref }}
+
+{{ .Description }}
+
+## Offres
+
+{{ range $offres }}- [{{ .Title }}]({{ .Permalink }}) : {{ .Description }}
+{{ end }}
+## Informations
+
+- [Accueil]({{ .Permalink }}) : présentation, références et contact (contact@glads.fr).
+{{ with .Site.GetPage "/mentions-legales" }}- [{{ .Title }}]({{ .Permalink }}) : {{ .Description }}
+{{ end -}}
