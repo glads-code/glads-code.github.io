@@ -1,6 +1,6 @@
 ---
 title: "Décisions en attente"
-date: 2026-09-28
+date: 2026-09-29
 url: /veille/attente/
 sitemap:
   disable: true
@@ -11,7 +11,6 @@ Propositions des revues pas encore tranchées. Détail dans chaque [revue](/veil
 | Depuis| ID | Projet | Proposition | Effort |
 |--------|----|--------|-------------|--------|
 | 27/09 | P-20260927-20-4 | site GLADS | Page /offres/ au lieu d'un 404 | S |
-| 27/09 | P-20260927-20-5 | fluttercontact | Décider : actif ou en pause | S |
 | 27/09 | P-20260927-12-2 | site GLADS | Page « Audit technique avant rachat ou levée de fonds » | M |
 | 27/09 | P-20260927-12-4 | site GLADS | Page « Choisir et encadrer un prestataire de développement » | S-M |
 | 27/09 | P-20260927-08-3 | tri-mails | Banc d'essai automatique et shellcheck en CI | M |
@@ -35,5 +34,4 @@ Propositions des revues pas encore tranchées. Détail dans chaque [revue](/veil
 | 25/09 | P-20260925-08-3 | fluttercontact | Nom, signature de release, GitHub Releases puis F-Droid (dépôt public à décider) | M |
 | 25/09 | P-20260925-08-4 | fluttercontact | Synchronisation CardDAV (Nextcloud, Infomaniak, iCloud) | L |
 | 24/09 | P-20260924-22-3 | site GLADS | Page « À propos » avec entité Person | S-M |
-| 24/09 | P-20260924-22-5 | veille-techno | Suivi mensuel des citations de GLADS par les IA | S |
 | 24/09 | P-20260924-20-2 | site GLADS | 2 ou 3 cas clients à partir des références | M |
