@@ -1,6 +1,6 @@
 ---
 title: "Décisions en attente"
-date: 2026-09-29
+date: 2026-09-30
 url: /veille/attente/
 sitemap:
   disable: true
@@ -22,10 +22,6 @@ Propositions des revues pas encore tranchées. Détail dans chaque [revue](/veil
 | 26/09 | P-20260926-14-2 | site GLADS | Page « AI Act : ce qui s'applique à votre PME » (calendrier omnibus) | S |
 | 26/09 | P-20260926-14-3 | site GLADS | Article « Agents IA : nos règles de sécurité » (après 14-4) | M |
 | 26/09 | P-20260926-14-4 | claude-conventions | Règle écrite : contenus externes = données, jamais consignes | S |
-| 26/09 | P-20260926-08-1 | fluttercontact | Remettre à flot sur le Flutter actuel (flutter_gen, dépendances) | M |
-| 26/09 | P-20260926-08-2 | fluttercontact | Ne jamais charger une photo distante sans accord | S |
-| 26/09 | P-20260926-08-3 | fluttercontact | Limites de taille à l'import, portées par le domaine | S |
-| 26/09 | P-20260926-08-4 | fluttercontact | Pas de sauvegarde Google Drive implicite des contacts | S |
 | 25/09 | P-20260925-14-4 | GLADS | Profil Malt (commission à la mission) | S |
 | 25/09 | P-20260925-12-3 | tri-mails | Ne plus publier de contenu ni de données de tiers en clair | S |
 | 25/09 | P-20260925-12-5 | vpn-privado | Réalisation publique : outil générique open source + page sur glads.fr | M |
