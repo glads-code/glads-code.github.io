@@ -10,4 +10,4 @@ params:
 - **Applications sur mesure & SaaS** — Logiciels métier, applications web, solutions cloud natives
 - **Intégration de systèmes** — API RESTful, gRPC et architectures événementielles
 - **Optimisation des bases de données** — PostgreSQL, SQL Server, Oracle — jusqu'à 40% de gain de performance
-- **Maîtrise C#/.NET, GoLang, Rust, C** — Projets pilotés jusqu'à 45 000 jours/homme
+- **Maîtrise C#/.NET, GoLang, Rust, C** — Participation à des projets allant jusqu'à 45 000 jours/homme

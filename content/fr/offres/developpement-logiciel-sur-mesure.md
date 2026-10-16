@@ -40,4 +40,4 @@ Un logiciel métier, une application web ou un produit SaaS doit durer. GLADS co
 
 - Code lisible, testé et documenté, que vos équipes peuvent reprendre.
 - Des choix technologiques justifiés, sans dépendance inutile.
-- Expérience de projets allant jusqu'à 45 000 jours/homme.
+- Participation à des projets allant jusqu'à 45 000 jours/homme.
