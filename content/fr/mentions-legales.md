@@ -44,7 +44,17 @@ L'ensemble des contenus présents sur ce site (textes, images, logos, structure)
 
 ## Protection des données personnelles (RGPD)
 
-Ce site ne collecte aucune donnée personnelle directement. Aucun formulaire, aucun cookie, aucun outil de mesure d'audience ne sont utilisés, et aucune ressource (police, script, image) n'est chargée depuis un site tiers.
+Ce site ne dépose aucun cookie et ne contient aucun formulaire. Aucune ressource (police, script, image) n'est chargée depuis un site tiers : la seule ressource extérieure est l'outil de mesure d'audience décrit ci-dessous, hébergé par GLADS elle-même.
+
+### Mesure d'audience
+
+Pour connaître la fréquentation du site et l'améliorer (pages les plus lues, sites d'où viennent les visiteurs, type d'appareil), GLADS utilise le logiciel libre [Matomo](https://matomo.org), installé sur son propre serveur en France (stats.glads-code.fr). Aucune donnée n'est transmise à un tiers.
+
+Cette mesure est configurée pour respecter les conditions de la CNIL qui la dispensent de consentement : aucun cookie n'est déposé, votre adresse IP est tronquée (les deux derniers octets sont effacés) avant tout enregistrement, aucun suivi n'est fait d'un site à l'autre et les données ne servent qu'à produire des statistiques anonymes. Le signal « Do Not Track » de votre navigateur est respecté. Les données de visite sont supprimées au bout de **13 mois**. Base légale : intérêt légitime de GLADS à mesurer l'audience de son site.
+
+Vous pouvez vous y opposer à tout moment : ce choix est enregistré dans votre navigateur (stockage local, sans cookie) et vaut pour ce navigateur seulement.
+
+<p><span id="matomo-optout-etat">L'opposition nécessite JavaScript ; sans JavaScript, aucune mesure n'est faite.</span> <button type="button" id="matomo-optout" hidden>Refuser la mesure d'audience</button></p>
 
 ### Journaux de l'hébergeur
 
