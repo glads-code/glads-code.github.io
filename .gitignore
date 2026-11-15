@@ -2,3 +2,4 @@ public/*
 **/_gen/
 .vs
 .hugo_build.lock
+.claude/settings.local.json
