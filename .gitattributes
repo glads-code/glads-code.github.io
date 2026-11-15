@@ -1,0 +1,9 @@
+# Fins de ligne : LF dans le dépôt et dans les copies de travail, sur toutes
+# les plateformes (Git pour Windows convertirait sinon en CRLF, ce qui casse
+# les scripts sh). Git détecte seul les fichiers binaires.
+* text=auto eol=lf
+
+# Fichiers qui exigent CRLF : scripts cmd de Windows et vCard (RFC 6350).
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.vcf text eol=crlf
