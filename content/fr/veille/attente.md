@@ -1,6 +1,6 @@
 ---
 title: "Décisions en attente"
-date: 2026-11-16
+date: 2026-11-17
 url: /veille/attente/
 sitemap:
   disable: true
